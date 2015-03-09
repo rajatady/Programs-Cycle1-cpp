@@ -23,18 +23,20 @@ public:
         cin>>a>>b>>c>>d;
     }
     
-    friend void add(class a);
+    friend a add(class x);
     
 };
 
-void add(class a)
+a add(class x)
 {
     a B;
     B.d=B.a+B.b+B.c;
     B.d=B.d/2;
+    return B;
 }
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    a A1,A2;
+    A1.input();
+    A2=add(A1);
+    A2.display();
 }
