@@ -18,15 +18,14 @@ class vehicle{
 public:
     vehicle()
     {
-        regno=0;
         count++;
-        cout<<"Vehicle parked\n";
+        cout<<"Vehicle created\n";
     }
     
     ~vehicle()
     {
         count--;
-        cout<<"Vehicle moved from parking\n";
+        cout<<"Vehicle destroyed\n";
     }
     
     
@@ -43,46 +42,19 @@ public:
     
     static void getVehicleCount()
     {
-        cout<<"Total no of vehicles in shed\n"<<count<<endl;
+        cout<<"Total no of vehicles\n"<<count<<endl;
     }
 };
 
 int vehicle::count=0;
 
-vehicle create()
-{
-    vehicle *ptr=new vehicle;
-    return *ptr;
-}
-
 
 int main(int argc, const char * argv[]) {
-    int choice;
-    vehicle *ptr=new vehicle;
-    while(1)
-    {
-        cout<<"Enter your choice\n";
-        cout<<"1.Park Vehicle\n2.Move Vehicle\t\t\n";
-        cin>>choice;
-        {
-           switch(choice)
-            {
-                case 1: ;
-                        *ptr= create();
-                        ptr->setregno();
-                        ptr->getregno();
-                        ptr->getVehicleCount();
-                    break;
-                case 2:
-                    delete ptr;
-              
-                    
-                default:
-                    exit(0);
-            }
-        }
-    }
     
-   
+    vehicle v1;
+    v1.setregno();
+    v1.getregno();
+    v1.getVehicleCount();
+    
 }
 
