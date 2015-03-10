@@ -1,0 +1,43 @@
+//
+//  main.cpp
+//  cpp-10-namespace
+//
+//  Created by Kumar Divya  Rajat on 10/03/15.
+//  Copyright (c) 2015 Kumar Divya  Rajat. All rights reserved.
+//
+
+#include <iostream>
+
+using namespace std;
+
+namespace first
+{
+    int x=10;
+    int y=10;
+    
+}
+
+namespace second
+{
+    int x=20;
+    int y=40;
+    
+    namespace third
+    {
+        int x=40;
+        int y=60;
+        
+    }
+}
+using namespace second::third;
+
+int main()
+{
+    cout<<"X from first namespace\t"<<first::x<<"\nY from first namespace\t"<<first::y;
+    
+    cout<<"\nX from second namespace\t"<<second::x<<"\nY from second namespace\t"<<second::y;
+    
+    cout<<"\nX from third namespace\t"<<x<<"\nY from third namespace\t"<<y;
+    
+    
+}
