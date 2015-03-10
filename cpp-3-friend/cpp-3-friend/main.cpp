@@ -1,4 +1,4 @@
-//
+//3. Write a cpp program to illustrate the use of Friend function and also illustrate how an object can be created within a function and returned to another function.
 //  main.cpp
 //  cpp-3-friend
 //
@@ -10,31 +10,40 @@
 
 using namespace std;
 
-class a{
-    int a;
-    int b;
-    int c;
-    int d;
+class complex
+{
+    int r;
+    int i;
+    
     
 public:
     void input()
     {
-        cout<<"Enter a,b,c and d\n";
-        cin>>a>>b>>c>>d;
+        cout<<"Enter real part followed by the imagianry part\n";
+        cin>>r>>i;
     }
     
-    friend void add(class a);
+    void display()
+    {
+        cout<<r<<"+"<<i;
+    }
+    
+    friend complex add(complex,complex);
     
 };
 
-void add(class a)
+complex add(complex a, complex b)
 {
-    a B;
-    B.d=B.a+B.b+B.c;
-    B.d=B.d/2;
+    complex y;
+    y.r=a.r+b.r;
+    y.i=a.i+b.i;
+    return y;
 }
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    complex c1,c2,c3;
+    c1.input();
+    c2.input();
+    c3=add(c1,c2);
+    c3.display();
 }
