@@ -15,7 +15,7 @@ class add{
     int b;
     
 public:
-    void sum()
+    void input()
     {
         cout<<"Enter number 1\n";
         cin>>a;
@@ -32,6 +32,6 @@ public:
 
 int main(int argc, const char * argv[]) {
     add a;
-    a.sum();
+    a.input();
     a.display();
 }
