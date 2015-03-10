@@ -28,7 +28,7 @@ public:
         usn=new char[lenght_usn+1];
     }
     
-    student(char *s,char *q,int m[])
+    student(char *s,char *q)
     {
         lenght_name=(int)strlen(s);
         name=new char[lenght_name+1];
@@ -37,6 +37,11 @@ public:
         usn=new char[lenght_usn+1];
         strcpy(usn,q);
     }
+    
+    /*~student()
+    {
+        cout<<"hi";
+    }*/
     
     void input()
     {
@@ -86,16 +91,20 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
-    int i,n=3;
-    student s[n];
-    cout<<"Enter details\n";
-    for(i=0;i<3;i++)
+    student s[5];
+    int i;
+    cout<<"Enter the records you want to create\n";
+    int n;
+    cin>>n;
+    cout<<"Enter the details\n";
+    for(i=0;i<n;i++)
     {
         s[i].input();
     }
-    cout<<"The details are\n";
-    for(i=0;i<3;i++)
+    cout<<"The details are \n";
+    for(i=0;i<n;i++)
     {
+        s[i].calc();
         s[i].display();
     }
 }
