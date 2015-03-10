@@ -1,7 +1,8 @@
 //
 //  main.cpp
 //  cpp-prgrm-2-static
-//
+//  Write a CPP program to create a class with a Static data member that can be used as 
+//  counter that records the occurences of all the records.
 //  Created by Kumar Divya  Rajat on 07/03/15.
 //  Copyright (c) 2015 Kumar Divya  Rajat. All rights reserved.
 //
@@ -27,8 +28,9 @@ public:
     {
         cout<<"a="<<a<<endl;
         cout<<"b="<<b<<endl;
-        cout<<"Record number="<<count;
+        cout<<"Record number="<<count\n;
     }
+    
     
 };
 
@@ -41,5 +43,5 @@ int main(int argc, const char * argv[]) {
     {
         a[i].input();
         a[i].display();
-        }
+    }
 }
