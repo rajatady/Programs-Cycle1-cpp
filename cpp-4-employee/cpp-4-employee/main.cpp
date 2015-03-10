@@ -24,7 +24,7 @@ public:
         cin>>emp_name;
         cout<<"Enter employee number\n";
         cin>>emp;
-        cout<<"Enter baisc\n";
+        cout<<"Enter basic\n";
         cin>>basic;
         count++;
     }
@@ -44,7 +44,7 @@ public:
         cout<<"Employee Name-\t"<<emp_name<<endl;
         cout<<"Basic-\t"<<basic<<endl;
         cout<<"DA-\t"<<da<<endl;
-        cout<<"IT-\t"<<it;
+        cout<<"IT-\t"<<it<<endl;;
         cout<<"Net Salary=("<<basic<<"+"<<da<<"-"<<it<<")\t=\t"<<net<<endl;
     }
 };
@@ -63,36 +63,8 @@ int main(int argc, const char * argv[]) {
     int j=0;
     while(j!=n)
     {
-        cout<<"______________________";
+        cout<<"\n______________________\n";
         e[j].display();
         j++;
     }
-
-
-    /*cout<<"Enter how many employee details do you want?\n";
-    int n;
-    cin>>n;
-    int i=0;
-    while(i!=n)
-    {
-        e[i].input();
-        e[i].calculate();
-        i++;
-    }
-    int empno;
-    cout<<"Enter employee number to search\n";
-    cin>>empno;
-    while(i!=n || e[i].emp!=empno)
-    {
-        i++;
-    }
-    
-    if(i==n)
-    {
-        cout<<"Incorrent employee number\n";
-    }
-    else
-    {
-        e[i].display();
-    }*/
 }
