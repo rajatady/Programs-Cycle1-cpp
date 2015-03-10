@@ -1,4 +1,5 @@
-//3. Write a cpp program to illustrate the use of Friend function and also illustrate how an object can be created within a function and returned to another function.
+//3. Write a cpp program to illustrate the use of Friend function and 
+//also illustrate how an object can be created within a function and returned to another function.
 //  main.cpp
 //  cpp-3-friend
 //
