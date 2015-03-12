@@ -21,27 +21,21 @@ class student{
 public:
     student()
     {
-        lenght_name=0;
-        lenght_usn=0;
-        avg=0;
-        name=new char[lenght_name+1];
-        usn=new char[lenght_usn+1];
+         lenght_name=0;
+         lenght_usn=0;
+         
+         name=new char[lenght_name+1];
+         usn=new char[lenght_usn+1];
+         avg=0;
+         cout<<"Objects of size 5 initialised\n";
     }
     
-    student(char *s,char *q)
-    {
-        lenght_name=(int)strlen(s);
-        name=new char[lenght_name+1];
-        strcpy(name,s);
-        lenght_usn=(int)strlen(q);
-        usn=new char[lenght_usn+1];
-        strcpy(usn,q);
-    }
     
-    /*~student()
+    ~student()
     {
-        cout<<"hi";
-    }*/
+        cout<<"Object deleted";
+    }// This destructor is explicitly called by the compiler everytime the program is terminated if you are creating objects.
+    // In case you are using pointers to the objects, using the command delete pointername will call the destructor.
     
     void input()
     {
